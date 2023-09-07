@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Trackle Docs</title>
+    <style media="screen">
+      @import url(https://fonts.bunny.net/css?family=roboto:100,300,400,500,700);
+
+      /* Reset */
+      *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+          all: unset;
+          display: revert;
+      }
+
+      /* Preferred box-sizing value */
+      *,
+      *::before,
+      *::after {
+          box-sizing: border-box;
+      }
+
+      /* Reapply the pointer cursor for anchor tags */
+      a, button {
+          cursor: revert;
+      }
+
+      /* Remove list styles (bullets/numbers) */
+      ol, ul, menu {
+          list-style: none;
+      }
+
+      /* For images to not be able to exceed their container */
+      img {
+          max-inline-size: 100%;
+          max-block-size: 100%;
+      }
+
+      /* removes spacing between cells in tables */
+      table {
+          border-collapse: collapse;
+      }
+
+      /* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+      input, textarea {
+          -webkit-user-select: auto;
+      }
+
+      /* revert the 'white-space' property for textarea elements on Safari */
+      textarea {
+          white-space: revert;
+      }
+
+      /* minimum style to allow to style meter element */
+      meter {
+          -webkit-appearance: revert;
+          appearance: revert;
+      }
+
+      /* preformatted text - use only for this feature */
+      :where(pre) {
+          all: revert;
+      }
+
+      /* reset default text opacity of input placeholder */
+      ::placeholder {
+          color: unset;
+      }
+
+      /* remove default dot (•) sign */
+      ::marker {
+          content: initial;
+      }
+
+      /* fix the feature of 'hidden' attribute.
+         display:revert; revert to element instead of attribute */
+      :where([hidden]) {
+          display: none;
+      }
+
+      /* revert for bug in Chromium browsers
+         - fix for the content editable attribute will work properly.
+         - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+      :where([contenteditable]:not([contenteditable="false"])) {
+          -moz-user-modify: read-write;
+          -webkit-user-modify: read-write;
+          overflow-wrap: break-word;
+          -webkit-line-break: after-white-space;
+          -webkit-user-select: auto;
+      }
+
+      /* apply back the draggable feature - exist only in Chromium and Safari */
+      :where([draggable="true"]) {
+          -webkit-user-drag: element;
+      }
+
+      /* Revert Modal native behavior */
+      :where(dialog:modal) {
+          all: revert;
+      }
+
+      /* style */
+      .wrapper{
+        margin-left:auto;
+        margin-right:auto;
+        max-width:950px;
+        display:block;
+      }
+      .page-content{
+        display:block;
+        font-family: 'Roboto', sans-serif;
+        padding-top:25px;
+        padding-bottom:25px;
+        padding-left:10px;
+        padding-right:10px;
+      }
+
+      .page-content .page-title{
+        margin-bottom:50px;
+        border-bottom: 1px solid #dddddd;
+      }
+
+      .page-content .section{
+        font-size:18px;
+        font-weight:400;
+        margin-bottom:25px;
+      }
+
+      .page-content .section-text-bold{
+        font-weight:500;
+      }
+      .page-content .section-title-text{
+        margin-bottom:25px;
+        font-size:30px;
+        font-weight:500;
+      }
+
+      .page-content .page-title-text{
+        font-size:50px;
+        font-weight: 700;
+      }
+
+      .page-content .page-title-caption{
+        margin-top:25px;
+        margin-bottom:25px;
+        font-size:18px;
+      }
+
+      .section .highlight{
+        display:inline-block;
+        margin-top:25px;
+        margin-bottom:25px;
+        padding-top:10px;
+        padding-bottom:10px;
+        padding-left:25px;
+        border-left:10px solid #dddddd;
+        font-size:18px;
+      }
+
+      .section .highlight.link{
+        border-left:10px solid #3b74cb;
+      }
+
+      .section .highlight.warning{
+        border-left:10px solid #d36d6d;
+      }
+
+      .section-mb20{
+        margin-bottom:25px;
+      }
+
+      .section-list{
+        list-style:disc;
+        margin-left:20px;
+        padding:0px;
+      }
+
+      .section-list-num{
+        list-style:list;
+        margin-left:20px;
+        padding:0px;
+      }
+
+
+
+      .section-list li, .section-list-num li{
+        display:list-item;
+        padding:0px;
+        margin-bottom:10px;
+      }
+
+      .section .underline{
+        text-decoration:underline;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="page-content">
+        <div class="page-title">
+          <h1 class="page-title-text">Trackle Documentation</h1>
+          <p class="page-title-caption">Documentation for getting started with Trackle</p>
+        </div>
+        <div class="section">
+          <div class="section-title">
+            <h2 class="section-title-text">Link to Trackle</h2>
+            <p>Trackle is not accessible through search engines, please bookmark the following link</p>
+            <a href="www.trackle.co.uk/scitt"><span class="highlight link">www.trackle.co.uk/scitt</span></a>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-title">
+            <h2 class="section-title-text">Creating an account</h2>
+          </div>
+            <p class="section-mb20">You'll need the following:</p>
+            <ul class="section-list">
+              <li>Invite username <span class="list-highlight"></li>
+              <li>Invite password</li>
+            </ul>
+            <span class="highlight">The welcome document contains your invite username and invite password. They are solely for the purpose of account creation and can only be used once.</span>
+            <p class="section-mb20 section-text-bold">Steps</p>
+            <ol class="section-list-num">
+              <li>Fill in the following form</li>
+              <a href="www.trackle.co.uk/scitt"><span class="highlight link">Click to create an account</span></a>
+              <li>Click the 'create account' button</li>
+              <li>Save the generated username and password</li>
+              <span class="highlight warning">Please make sure you save the username and password shown in step 3. You will use this to sign in to Trackle, and your browser will not automatically save or re-display this information.</span>
+              <li>Click the 'complete registration' button</li>
+              <li>Use the login details from step 3 to signin to your Trackle account</li>
+            </ol>
+        </div>
+        <div class="section">
+          <div class="section-title">
+            <h2 class="section-title-text">Support</h2>
+            <p>If you require any help or information please submit a ticket at the following email</p>
+            <span class="highlight">scitt-support@trackle.co.uk</span>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
